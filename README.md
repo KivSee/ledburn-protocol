@@ -1,7 +1,7 @@
 # ledburn-protocol
 Implementation for the ledburn protocol - for real time addressable leds control
 
-[![Release](https://jitpack.io/v/jitpack/maven-simple.svg)](https://jitpack.io/#jitpack/maven-simple)
+[![Release](https://jitpack.io/v/leddict/ledburn-protocol.svg)](https://jitpack.io/#leddict/ledburn-protocol)
 
 # Requirments
 1. [Install JDK 1.7+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -31,9 +31,9 @@ and the dependency:
 
 ```xml
 	<dependency>
-		<groupId>com.leddict</groupId>
+		<groupId>com.github.leddict</groupId>
 		<artifactId>ledburn-protocol</artifactId>
-		<version>0.1</version>
+		<version>0.2</version>
 	</dependency>
 ```
 
