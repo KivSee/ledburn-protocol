@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>Simple Maven example</name>
-  <url>https://jitpack.io/#jitpack/ledburn-protocol/0.1</url>
+  <url>https://jitpack.io/#leddict/ledburn-protocol/0.1</url>
 
   <dependencies>
     <dependency>
