@@ -1,5 +1,6 @@
 # ledburn-protocol
 Implementation for the ledburn protocol - for real time addressable leds control
+Large scale installations of LED that requires Real-Time
 
 [![Release](https://jitpack.io/v/leddict/ledburn-protocol.svg)](https://jitpack.io/#leddict/ledburn-protocol)
 
