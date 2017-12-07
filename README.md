@@ -3,6 +3,7 @@ Implementation for the ledburn protocol - for real time addressable leds control
 Large scale installations of LED that requires Real-Time
 
 [![Release](https://jitpack.io/v/leddict/ledburn-protocol.svg)](https://jitpack.io/#leddict/ledburn-protocol)
+[![Build](https://travis-ci.org/Leddict/ledburn-protocol.svg?branch=master)](https://travis-ci.org/Leddict/ledburn-protocol)
 
 # Requirments
 1. [Install JDK 1.7+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
