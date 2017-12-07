@@ -5,6 +5,10 @@ bin/
 .classpath
 .settings/
 
+#intellij IDEA files
+.idea/
+*.iml
+
 # Package Files #
 *.jar
 hs_err_pid*
