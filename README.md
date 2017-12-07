@@ -33,7 +33,7 @@ and the dependency:
   <dependency>
 	  <groupId>com.github.leddict</groupId>
 	  <artifactId>ledburn-protocol</artifactId>
-	  <version>0.4</version>
+	  <version>0.5</version>
   </dependency>
 ```
 
