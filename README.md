@@ -30,10 +30,13 @@ To use it in your Maven build add:
 and the dependency:
 
 ```xml
-	<dependency>
-		<groupId>com.github.leddict</groupId>
-		<artifactId>ledburn-protocol</artifactId>
-		<version>0.2</version>
-	</dependency>
+  <dependency>
+	  <groupId>com.github.leddict</groupId>
+	  <artifactId>ledburn-protocol</artifactId>
+	  <version>0.4</version>
+  </dependency>
 ```
 
+You should probably check the example file here (MISSING A LINK)
+
+If you want to contribute please see [CONTRIBUTING.md](CONTRIBUTING.md)
