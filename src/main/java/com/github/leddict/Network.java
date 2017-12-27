@@ -9,10 +9,10 @@ import java.util.concurrent.ThreadLocalRandom;
 class SingleControllerData {
 
     /*
-    data - array of RGBColor. The number of pixels in the segment is givin by to the array length.
-    the RGBColor data type already has the pixel color in the correct format which is 3 integers in the range [0-255]
+    data - array of FSTColor. The number of pixels in the segment is givin by to the array length.
+    the FSTColor data type already has the pixel color in the correct format which is 3 integers in the range [0-255]
      */
-    public void addSegment(RGBColor[] data, int stripId, int pixelId) {
+    public void addSegment(FSTColor[] data, int stripId, int pixelId) {
         SegmentData newSegment = new SegmentData();
         newSegment.data = data;
         newSegment.stripId = stripId;
@@ -60,10 +60,10 @@ class SingleControllerData {
             EncodeUint16ToByteArray(segmentData.pixelId, msgContent, 22);
 
             int msgIndex=24;
-            for(RGBColor color : segmentData.data) {
-                msgContent[msgIndex++] = color.r;
-                msgContent[msgIndex++] = color.g;
-                msgContent[msgIndex++] = color.b;
+            for(FSTColor color : segmentData.data) {
+                msgContent[msgIndex++] = color.first;
+                msgContent[msgIndex++] = color.second;
+                msgContent[msgIndex++] = color.third;
             }
 
             DatagramPacket sendPacket = new DatagramPacket(msgContent, msgContent.length, ipAddress, 2000);
@@ -134,7 +134,7 @@ class SingleControllerData {
     }
 
     static class SegmentData {
-        public RGBColor[] data;
+        public FSTColor[] data;
         public int stripId;
         public int pixelId;
     }
@@ -158,7 +158,7 @@ public class Network {
         this.lastFrameId++;
     }
 
-    public void addSegment(String controllerName, RGBColor[] data, int stripId, int pixelId) {
+    public void addSegment(String controllerName, FSTColor[] data, int stripId, int pixelId) {
         SingleControllerData controller = this.controllers.get(controllerName);
         if(controller == null) {
             // TODO: log
