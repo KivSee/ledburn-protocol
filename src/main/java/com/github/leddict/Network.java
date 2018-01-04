@@ -8,6 +8,10 @@ import java.util.concurrent.ThreadLocalRandom;
 
 class SingleControllerData {
 
+    public SingleControllerData(String hostNameOrIpString) {
+        this.m_hostNameOrIpString = hostNameOrIpString;
+    }
+
     /*
     data - array of FSTColor. The number of pixels in the segment is givin by to the array length.
     the FSTColor data type already has the pixel color in the correct format which is 3 integers in the range [0-255]
@@ -88,7 +92,7 @@ class SingleControllerData {
         try {
             // TODO: get the ip as configuration
             // TODO: add broadcast to the controller (new message in LedBurn protocol) so it will publish the ip by name
-            this.ipAddress = InetAddress.getByName("10.0.0.21");
+            this.ipAddress = InetAddress.getByName(this.m_hostNameOrIpString);
             return true;
         }
         catch (UnknownHostException e) {
@@ -97,6 +101,7 @@ class SingleControllerData {
         }
     }
     private InetAddress ipAddress;
+    private String m_hostNameOrIpString;
 
     private boolean createSocket() {
 
@@ -143,11 +148,8 @@ class SingleControllerData {
 
 public class Network {
 
-    // amir test - testing the new repository
-
-    public void configure() {
-        // TODO: use actual configuration
-        this.controllers.put("test", new SingleControllerData());
+    public void configureControllerWithIp(String nickName, String hostNameOrIpString) {
+        this.controllers.put(nickName, new SingleControllerData(hostNameOrIpString));
     }
 
     public void send() {
