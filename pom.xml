@@ -4,11 +4,11 @@
 
   <groupId>com.leddict</groupId>
   <artifactId>ledburn-protocol</artifactId>
-  <version>0.5-SNAPSHOT</version>
+  <version>0.6-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>Ledburn protocol for realtime LED</name>
-  <url>https://jitpack.io/#leddict/ledburn-protocol/0.5</url>
+  <url>https://jitpack.io/#leddict/ledburn-protocol/0.6</url>
 
   <dependencies>
     <dependency>
